@@ -1,0 +1,38 @@
+Tema: Administrativo
+
+Épico
+COMO administrador EU QUERO manter as informações
+dos usuarios PARA poder utilizá-la nos demais 
+requisitos.
+
+TAB 1
+-----------------------------------------------
+NOME     |  TIPO    | TAMANHO   | OBR  | OUTROS
+-----------------------------------------------
+ID
+CODIGO   |  STRING  | 8         | x    | UNQ
+NOME     |  STRING  | 50        | X    | 
+STATUS   |  BOOLEAN | 1         | X    | 0
+
+História: Cadastrar usuario
+COMO administrador EU QUERO cadastrar usuarios
+PARA poder utilizá-la nos demais requisitos.
+
+Cenario 1: Dados válidos
+DADO QUE o adminitrador acesse o menu de cadastrar usuario
+E insira as informações [TAB1]
+QUANDO ele clicar no botão salvar
+ENTÃO o sistena irá inserir os dados no banco 
+E apresentará a mensagem "Usuario cadastrado".
+
+Cenario 2: Dados inválidos
+DADO QUE o adminitrador acesse o menu de cadastrar usuario
+E insira as informações [TAB1] de forma inválida
+QUANDO ele clicar no botão salvar
+ENTÃO o sistema apresentará a mensagem "Informações inválidas".
+
+Cenario 3: Com código duplicado
+DADO QUE o adminitrador acesse o menu de cadastrar usuario
+E insira as informações [TAB1] com código duplicado
+QUANDO ele clicar no botão salvar
+ENTÃO o sistema apresentará a mensagem "Código duplicado".
